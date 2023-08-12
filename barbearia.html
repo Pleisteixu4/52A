@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Barbearia Alura</h1>
+        <h1> <img src="https://angelicaalbuquerque.github.io/barbearia_alura/logo.png" height="200px" alt="logo da Barbearia Alura"> </h1>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -18,31 +18,57 @@
             </ul>
         </nav>
     </header>
-    
+   
+    <img id="banner" src="https://angelicaalbuquerque.github.io/barbearia_alura/banner-1600x600.jpg">
+		<div class="principal">
+			<h2 class="titulo-centralizado">Sobre a Barbearia Alura</h2>
+	 
+			<p>Localizada no coração da cidade, a <strong>Barbearia Alura</strong> trás para o mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos clientes a cada dia.</p>
+			<p id="missao"><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos clientes"</strong>.</em></p>
+            <p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
+		</div>
+
     <section class="banner">
         <h2>Serviços Profissionais de Barbearia</h2>
         <p>Agende o seu corte e aproveite nossos serviços de qualidade.</p>
-        <a href="#" class="btn">Agende Agora</a>
     </section>
     
     <section class="servicos">
         <h2>Nossos Serviços</h2>
         <div class="servico">
-            <img src="corte.jpg" alt="Corte de Cabelo">
+            <img src="https://gitricardosantos.github.io/Barbearia/cabelo.jpg" alt="Corte de Cabelo">
             <h3>Corte de Cabelo</h3>
             <p>Oferecemos cortes modernos e clássicos para atender ao seu estilo.</p>
+            <p> por R$15,00 </p>
         </div>
         <div class="servico">
-            <img src="barba.jpg" alt="Barba">
+            <img src="https://angelicaalbuquerque.github.io/barbearia_alura/barba.jpg" alt="Barba">
             <h3>Barba</h3>
             <p>Cuidamos da sua barba com os melhores produtos e técnicas.</p>
+            <p>por R$10,00 </p>
         </div>
     </section>
     
     <section class="agendamento">
         <h2>Agende um Horário</h2>
         <p>Entre em contato para marcar o seu horário e aproveitar os nossos serviços.</p>
-        <a href="#" class="btn">Agendar Agora</a>
+        <a href="index.html"><button id="mostrarFormulario" class="btn">Agendamento</button></a>
+    
+    <div id="formulario" class="hidden">
+        <h2>Formulário de Contato</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem"></textarea>
+            
+            <a href="index.html"><button type="submit" class="btn">Enviar</button></a>
+        </form>
+    </div>
     </section>
     
     <footer>
@@ -51,10 +77,130 @@
 
   <style>
 
+.singup {
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  font-weight: bold;
+  font-size: x-large;
+  margin-top: 1.5em;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+  width: 300px;
+  flex-direction: column;
+  gap: 35px;
+  border-radius: 15px;
+  background: #e3e3e3;
+  box-shadow: 16px 16px 32px #c8c8c8,
+        -16px -16px 32px #fefefe;
+  border-radius: 8px;
+}
+
+.inputBox,
+.inputBox1 {
+  position: relative;
+  width: 250px;
+}
+
+.inputBox input,
+.inputBox1 input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: #000;
+  font-size: 1em;
+  background: transparent;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transition: 0.1s;
+  border-bottom-left-radius: 8px;
+}
+
+.inputBox span,
+.inputBox1 span {
+  margin-top: 5px;
+  position: absolute;
+  left: 0;
+  transform: translateY(-4px);
+  margin-left: 10px;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 12px;
+  color: #000;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 3px;
+  border-radius: 8px;
+}
+
+.inputBox input:valid~span,
+.inputBox input:focus~span {
+  transform: translateX(113px) translateY(-15px);
+  font-size: 0.8em;
+  padding: 5px 10px;
+  background: #000;
+  letter-spacing: 0.2em;
+  color: #fff;
+  border: 2px;
+}
+
+.inputBox1 input:valid~span,
+.inputBox1 input:focus~span {
+  transform: translateX(156px) translateY(-15px);
+  font-size: 0.8em;
+  padding: 5px 10px;
+  background: #000;
+  letter-spacing: 0.2em;
+  color: #fff;
+  border: 2px;
+}
+
+.inputBox input:valid,
+.inputBox input:focus,
+.inputBox1 input:valid,
+.inputBox1 input:focus {
+  border: 2px solid #000;
+  border-radius: 8px;
+}
+
+.enter {
+  height: 45px;
+  width: 100px;
+  border-radius: 5px;
+  border: 2px solid #000;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.5s;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 3em;
+}
+
+.enter:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+img, h1{
+    float: left;
+    font-size: 80px;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+}
+#banner {
+	width:100%;
+    border-radius: 20px;
 }
 
 header {
